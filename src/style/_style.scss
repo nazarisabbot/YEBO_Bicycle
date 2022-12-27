@@ -2,16 +2,63 @@ html,
 body {
   font-family: $main-font, sans-serif;
   font-size: $standart-font-size;
-  background-color: $black;
-  color: $seashel;
+  background-color: $white;
+  color: $textColor;
 }
 
 .wrapper {
   overflow: hidden;
   min-height: 100%;
+  padding: 0px 15px;
 }
 .container {
   max-width: $container-width;
   margin: 0 auto;
   padding: 0px 15px;
+}
+
+.header {
+  height: 88px;
+  margin-top: 35px;
+}
+.header__row {
+  text-align: center;
+  height: 100%;
+}
+.header__items {
+  display: inline-flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__items li {
+  margin-right: 73px;
+}
+
+.header__items > li {
+  font-size: $quite-font-size;
+  text-transform: uppercase;
+  color: $textColor;
+}
+
+.header__items li:last-child {
+  margin-right: 0px;
+}
+
+.header__items img {
+  position: relative;
+  z-index: 50;
+  width: 64px;
+  top: 0;
+  left: 0;
+}
+
+.main {
+}
+.fullscreen {
+}
+.vintagebike {
+}
+.footer {
 }
