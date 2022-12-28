@@ -7,9 +7,12 @@ body {
 }
 
 .wrapper {
+  position: relative;
+  top: 0;
+  left: 0;
   overflow: hidden;
   min-height: 100%;
-  padding: 0px 15px;
+  // padding: 0px 15px;
 }
 .container {
   max-width: $container-width;
@@ -18,47 +21,103 @@ body {
 }
 
 .header {
-  height: 88px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: transparent;
   margin-top: 35px;
 }
 .header__row {
-  text-align: center;
+  position: relative;
+  top: 0;
+  left: 0;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 .header__items {
   display: inline-flex;
   height: 100%;
   align-items: center;
-  justify-content: space-between;
 }
 
 .header__items li {
+  position: relative;
+  top: 0;
+  left: 0;
   margin-right: 73px;
 }
 
-.header__items > li {
-  font-size: $quite-font-size;
-  text-transform: uppercase;
-  color: $textColor;
+.header__items li:nth-child(1):after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 137%;
+  height: 3px;
+  width: 3px;
+  display: block;
+  border-radius: 100%;
+  background-color: $headerMenuText;
+}
+
+.header__items li:nth-child(3):after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 170%;
+  height: 3px;
+  width: 3px;
+  display: block;
+  border-radius: 100%;
+  background-color: $headerMenuText;
+}
+
+.header__items li:nth-child(2) {
+  margin-right: 100px;
+}
+
+.header__items li:nth-child(3) {
+  margin-left: 100px;
 }
 
 .header__items li:last-child {
   margin-right: 0px;
 }
 
-.header__items img {
-  position: relative;
-  z-index: 50;
-  width: 64px;
-  top: 0;
-  left: 0;
+.header__items > li a {
+  font-size: $quite-font-size;
+  font-weight: $bold;
+  text-transform: uppercase;
+  color: $headerMenuText;
+  letter-spacing: 3px;
 }
 
-// .main {
-// }
-// .fullscreen {
-// }
-// .vintagebike {
-// }
-// .footer {
-// }
+.header_logo {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translate(-43%, 0);
+  z-index: 50;
+  width: 97px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.fullscreen {
+  height: 100vh;
+  background-image: url("/src/img/main_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.vintagebike {
+}
+.footer {
+}
