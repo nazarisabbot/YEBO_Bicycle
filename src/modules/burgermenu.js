@@ -1,10 +1,20 @@
 const burger = document.querySelector(".header__burger");
-const headerRow = document.querySelector(".header__row");
-const headerItems = document.querySelector(".header__items");
+const header = document.querySelector(".header");
+const headerMenu = document.querySelector(".header__menu");
+const headerMenuitem = document.querySelector(".header__menuitem");
+const headerLinks = document.querySelectorAll(".header__link");
 
 burger.addEventListener("click", () => {
-  headerRow.classList.toggle("active");
-  burger.classList.toggle("active");
-  headerItems.classList.toggle("active");
   document.body.classList.toggle("lock");
+  header.classList.toggle("active");
+  headerMenu.classList.toggle("active");
+  headerMenuitem.classList.toggle("active");
+  burger.classList.toggle("active");
+  addClassActiveLi();
 });
+
+function addClassActiveLi() {
+  headerLinks.forEach((item) => {
+    item.classList.toggle("active");
+  });
+}
