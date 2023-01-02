@@ -19,13 +19,15 @@ body.lock {
   overflow: hidden;
   min-height: 100%;
 }
+
 .container {
   max-width: $container-width;
   margin: 0 auto;
   padding: 0px 15px;
 }
 
-// Header
+/* Header */
+
 .header {
   position: absolute;
   top: 0;
@@ -46,18 +48,6 @@ body.lock {
   background-color: $burgerMenuColor;
   z-index: 2;
   transition: all 0.5s ease-out;
-}
-
-.header.active::before {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 100vh;
-  background-color: $burgerMenuColor;
-  z-index: 2;
 }
 
 .header__items {
@@ -149,13 +139,15 @@ body.lock {
   display: none;
 }
 
-// Main
+/* Main */
 
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
+
+/* Full Screen */
+
 .fullscreen {
   height: 100vh;
   background-image: url("/src/img/main_bg.jpg");
@@ -164,13 +156,113 @@ body.lock {
   background-position: center;
 }
 
-// .vintagebike {
-// }
-// .footer {
-// }
+/* Basic style */
 
-// Media request for burger menu
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  letter-spacing: 3px;
+  color: $h1Color;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.article {
+  letter-spacing: 1px;
+  color: $textColor;
+  font-weight: 100;
+  line-height: 1.8em;
+}
+
+.block {
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Generation block */
+
+.generation__block {
+  background-color: $white1;
+}
+
+.generation {
+  padding: 140px 0 120px 0;
+}
+
+.generation__icon,
+.icon img {
+  width: 52px;
+  margin-bottom: 10px;
+}
+
+.generation__title {
+  margin-bottom: 20px;
+  font-size: $middle-font-size;
+}
+
+.generation__artical {
+  font-size: $middle-font-size;
+  text-align: center;
+}
+
+/* Vintage block */
+
+.vintage__image {
+  flex: 0 1 66.667%;
+  background-image: url("/src/img/main_bg_2.jpg");
+}
+
+.image {
+  height: 600px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.vintage__artical {
+  flex: 0 0 33.333%;
+}
+
+.vintage__section {
+  padding: 67px 70px 97px 70px;
+}
+
+.vintage__title {
+  margin-bottom: 20px;
+}
+
+.vintage__text {
+  font-size: $standart-font-size;
+  text-align: left;
+}
+
+/* Media request for burger menu */
+
 @media (max-width: $media-s) {
+  .header.active {
+    overflow: auto;
+    height: 100vh;
+  }
+
+  .header.active::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 150vh;
+    background-color: $burgerMenuColor;
+    z-index: 2;
+  }
+
   .header__burger {
     display: block;
     position: absolute;
