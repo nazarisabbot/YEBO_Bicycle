@@ -1,0 +1,29 @@
+@mixin flex($display, $direction, $alignItems) {
+  display: $display;
+  flex-direction: $direction;
+  align-items: $alignItems;
+}
+
+@mixin position($position, $top, $left, $transform) {
+  position: $position;
+  top: $top;
+  left: $left;
+  transform: translateX($transform);
+}
+
+@mixin backgroundImage($url) {
+  height: 100vh;
+  background-image: url($url);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@mixin backgroundImageBlock($url, $width, $height) {
+  width: $width;
+  height: $height;
+  background-image: url($url);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

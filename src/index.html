@@ -32,75 +32,90 @@
     <title>YEBO Bicycle</title>
   </head>
   <body>
-    <div class="wrapper">
+    <main class="page">
       <header class="header">
-        <div class="header__items">
-          <div class="header__logo">
-            <img src="./img/Logo.png" alt="logo" />
-          </div>
-          <nav class="header__menu">
-            <ul class="header__menuitem">
-              <li class="header__link">
-                <a href="#">about us</a>
-              </li>
-              <li class="header__link">
-                <a href="#">work</a>
-              </li>
-              <li class="header__link">
-                <a href="#">shop</a>
-              </li>
-              <li class="header__link">
-                <a href="#">contact</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="header__burger">
-            <span></span>
+        <div class="header__container">
+          <div class="header__row">
+            <div class="header__icon">
+              <img src="/src/img/Logo.png" alt="logo" />
+            </div>
+            <nav class="header__nav">
+              <ul class="header__body">
+                <li class="header__item"><a href="#">about us</a></li>
+                <li class="header__item"><a href="#">work</a></li>
+                <li class="header__item"><a href="#">shop</a></li>
+                <li class="header__item"><a href="#">contact</a></li>
+              </ul>
+            </nav>
+            <div class="header__burger">
+              <span></span>
+            </div>
           </div>
         </div>
       </header>
-      <main class="main">
-        <div class="fullscreen"></div>
-        <div class="generation__block">
-          <div class="container">
-            <section class="generation section">
-              <div class="generation__icon icon">
-                <img src="/src/img/Icon_1.png" alt="Icon_1" />
+      <div class="main__screen"></div>
+      <div class="content">
+        <div class="brands">
+          <section class="article article_white1">
+            <div class="article__container">
+              <div class="article__block article__block_big">
+                <div class="article__icon">
+                  <img src="/src/img/Icon_1.png" alt="Icon_1" />
+                </div>
+                <h1 class="article__title title">
+                  a new generation of vintage bike
+                </h1>
+                <article class="article__text article__text_big">
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book. It has survived not only five centuries,
+                    but also the leap into electronic typesetting, remaining
+                    essentially unchanged.
+                  </p>
+                </article>
               </div>
-              <h1 class="generation__title title">
-                a new generation of vintage bike
-              </h1>
-              <article class="generation__artical article">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged.
-              </article>
-            </section>
-          </div>
-        </div>
-        <div class="vintage__block block">
-          <div class="vintage__image image"></div>
-          <div class="vintage__artical">
-            <section class="vintage__section section">
-              <div class="vintage__icon icon">
-                <img src="/src/img/Icon_2.png" alt="Icon_2.png" />
+            </div>
+          </section>
+          <section class="brand-item">
+            <div class="brand-item__2-col">
+              <div class="brand-item__big-column">
+                <a href="#" class="brand-item__link link">
+                  <span class="link__logo">
+                    <img src="/src/img/Logo_2.png" alt="Logo_2" />
+                  </span>
+                  <span class="link__img"></span>
+                </a>
               </div>
-              <h1 class="vintage__title title">vintage oliva</h1>
-              <article class="vintage__text article">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived.
-              </article>
-            </section>
-          </div>
+              <section class="article article_white2">
+                <div class="article__block article__block_little">
+                  <div class="article__icon">
+                    <img src="/src/img/Icon_2.png" alt="Icon_2" />
+                  </div>
+                  <h2 class="article__title title">vintage oliva</h2>
+                  <article class="article__text article__text_little">
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type and scrambled it to make a
+                      type specimen book. It has survived.
+                    </p>
+                  </article>
+                </div>
+                <img
+                  src="/src/img/litle_horizontal_image_1.jpg"
+                  alt="horizontal_image_1"
+                />
+                <!-- <div class="article__image"></div> -->
+              </section>
+            </div>
+          </section>
         </div>
-      </main>
+      </div>
       <footer class="footer"></footer>
-    </div>
+    </main>
   </body>
 </html>
