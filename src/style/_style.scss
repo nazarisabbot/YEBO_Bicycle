@@ -303,6 +303,40 @@ body.lock {
   }
 }
 
+/* Twitter */
+.twitter {
+  background-color: $white1;
+  &__block {
+    @include flex(flex, column, center);
+    padding: 100px 0 150px 0;
+    @media (max-width: $media-xl) {
+      padding: 60px 0 50px 0;
+    }
+  }
+  &__icon {
+    margin-bottom: 25px;
+  }
+  &__title {
+    align-items: center;
+    font-size: $middle-font-size;
+    font-weight: $regular;
+    color: $burgerMenuColor;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    span {
+      font-size: $standart-font-size;
+      font-style: italic;
+    }
+  }
+  &__article {
+    > p {
+      text-align: justify;
+      line-height: 1.6;
+      font-size: $standart-font-size;
+    }
+  }
+}
+
 /* Media request */
 @media (max-width: $media-s) {
   /* Burger */
