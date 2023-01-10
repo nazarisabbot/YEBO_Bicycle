@@ -139,8 +139,13 @@ body.lock {
   &__2-col {
     height: 100%;
     display: flex;
+    @media (max-width: $media-xl) {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
   }
-  &__big-column {
+  &__big-column_2-col {
     flex: 0 1 66.667%;
   }
   &__link {
@@ -160,27 +165,24 @@ body.lock {
       justify-content: center;
       align-items: center;
       background-color: $logoColor;
-      opacity: 0;
+      opacity: 0.5;
       visibility: hidden;
+      transition: all 0.2s ease-out;
       > img {
         width: 116px;
       }
     }
-    &__img {
+    &__img_generation {
       @include position(absolute, 0, 0, 0);
-      width: 100%;
-      height: 100%;
-      background-image: url("/src/img/main_bg_2.jpg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+      @include backgroundImageBlock("/src/img/main_bg_2.jpg", 100%, 100%);
     }
   }
-  &__link {
-    opacity: 1;
+  &__link:hover > .link__logo {
+    opacity: 0.5;
     visibility: visible;
   }
 }
+
 .article {
   &_white2 {
     flex: 0 1 33.333%;
@@ -199,6 +201,104 @@ body.lock {
         font-size: $standart-font-size;
         padding: 0 68px 0 68px;
       }
+      &::after {
+        content: "";
+        display: block;
+        position: relative;
+        top: 51px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 55px;
+        height: 2px;
+        background-color: $grayLine;
+      }
+    }
+  }
+  &__img {
+    display: block;
+    &::before {
+      content: "";
+      display: block;
+      position: relative;
+      bottom: -20px;
+      width: 0;
+      height: 0;
+      margin-left: 50%;
+      transform: translateX(-50%);
+      border-right: 20px solid transparent;
+      border-left: 20px solid transparent;
+      border-top: 20px solid #fff;
+    }
+  }
+}
+
+/* Brand-item__2-col_reverse */
+.brand-item__2-col_reverse {
+  flex-direction: row-reverse;
+  @media (max-width: $media-xl) {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+.link__img_vintage {
+  @include position(absolute, 0, 0, 0);
+  @include backgroundImageBlock("/src/img/main_bg_3.jpg", 100%, 100%);
+}
+
+/* 3-col block */
+.brand-item {
+  height: 100%;
+  @media (max-width: $media-xl) {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  &__3-col {
+    display: flex;
+    flex-direction: row;
+    @media (max-width: $media-xl) {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__first-column {
+    flex: 0 1 33.333%;
+  }
+  &__link {
+    height: 100%;
+    display: block;
+    position: relative;
+  }
+  &__third-column {
+    flex: 0 1 33.333%;
+  }
+}
+.link {
+  &__img {
+    &_left {
+      @include position(absolute, 0, 0, 0);
+      @include backgroundImageBlock(
+        "/src/img/rectangle_left_image.jpg",
+        100%,
+        100%
+      );
+    }
+    &_rigth {
+      @include position(absolute, 0, 0, 0);
+      @include backgroundImageBlock(
+        "/src/img/rectangle_right_image.jpg",
+        100%,
+        100%
+      );
+    }
+  }
+}
+.article {
+  &__icon_3-col {
+    img {
+      width: 23px;
     }
   }
 }
@@ -233,22 +333,24 @@ body.lock {
     position: absolute;
     width: 100%;
     height: 2px;
-    background-color: $logoColor;
     transition: all 0.2s ease-out;
   }
   .header__burger::after {
     content: "";
     top: 0px;
     left: 0;
+    background-color: $logoColor;
   }
   .header__burger.active::after {
     top: 9px;
     transform: rotate(45deg);
+    background-color: $logoColor;
   }
   .header__burger::before {
     content: "";
     bottom: 0px;
     left: 0;
+    background-color: $logoColor;
   }
   .header__burger.active::before {
     bottom: 9px;
@@ -268,38 +370,25 @@ body.lock {
   }
   .header__body.active {
     @include position(absolute, 0, 0, 0);
-    @include flex(flex, column, center);
-    justify-content: flex-start;
-    padding: 200px 0 0 0;
-    width: 100%;
-    height: 100vh;
-    background-color: $burgerMenuColor;
-    transition: all 0.5s ease-out;
   }
-
   .header__item {
     padding-bottom: 35px;
   }
-
   .header__item a {
     font-size: $middle-font-size;
     letter-spacing: 2px;
     text-transform: uppercase;
     color: $white1;
   }
-
   .header__item:nth-child(1) {
     margin-right: 0;
   }
-
   .header__item:nth-child(2) {
     margin-right: 0;
   }
-
   .header__item:nth-child(3) {
     margin-left: 0;
   }
-
   .header__item:nth-child(4) {
     margin-left: 0;
   }
